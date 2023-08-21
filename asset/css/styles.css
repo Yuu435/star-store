@@ -1,0 +1,720 @@
+/* Reset browser */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Karla", sans-serif;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background-color: #f7f7f7;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import GG Font */
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-Bold.eot  ");
+  src: url("./../font/Karla/?#iefix") format("embedded-opentype"),
+    url("./../font/Karla/Karla-Bold.woff2") format("woff2"),
+    url("./../font/Karla/Karla-Bold.woff") format("woff"),
+    url("./../font/Karla/Karla-Bold.ttf") format("truetype"),
+    url("./../font/Karla/Karla-Bold.svg#Karla-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-Italic.eot");
+  src: url("./../font/Karla/Karla-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-Italic.woff2") format("woff2"),
+    url("./../font/Karla/Karla-Italic.woff") format("woff"),
+    url("./../font/Karla/Karla-Italic.ttf") format("truetype"),
+    url("./../font/Karla/Karla-Italic.svg#Karla-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-BoldItalic.eot");
+  src: url("./../font/Karla/Karla-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-BoldItalic.woff2") format("woff2"),
+    url("./../font/Karla/Karla-BoldItalic.woff") format("woff"),
+    url("./../font/Karla/Karla-BoldItalic.ttf") format("truetype"),
+    url("./../font/Karla/Karla-BoldItalic.svg#Karla-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-ExtraBoldItalic.eot");
+  src: url("./../font/Karla/Karla-ExtraBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-ExtraBoldItalic.woff2") format("woff2"),
+    url("./../font/Karla/Karla-ExtraBoldItalic.woff") format("woff"),
+    url("./../font/Karla/Karla-ExtraBoldItalic.ttf") format("truetype"),
+    url("./../font/Karla/Karla-ExtraBoldItalic.svg#Karla-ExtraBoldItalic")
+      format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-ExtraLightItalic.eot");
+  src: url("./../font/Karla/Karla-ExtraLightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-ExtraLightItalic.woff2") format("woff2"),
+    url("./../font/Karla/Karla-ExtraLightItalic.woff") format("woff"),
+    url("./../font/Karla/Karla-ExtraLightItalic.ttf") format("truetype"),
+    url("./../font/Karla/Karla-ExtraLightItalic.svg#Karla-ExtraLightItalic")
+      format("svg");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-ExtraBold.eot");
+  src: url("./../font/Karla/Karla-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-ExtraBold.woff2") format("woff2"),
+    url("./../font/Karla/Karla-ExtraBold.woff") format("woff"),
+    url("./../font/Karla/Karla-ExtraBold.ttf") format("truetype"),
+    url("./../font/Karla/Karla-ExtraBold.svg#Karla-ExtraBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-ExtraLight.eot");
+  src: url("./../font/Karla/Karla-ExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-ExtraLight.woff2") format("woff2"),
+    url("./../font/Karla/Karla-ExtraLight.woff") format("woff"),
+    url("./../font/Karla/Karla-ExtraLight.ttf") format("truetype"),
+    url("./../font/Karla/Karla-ExtraLight.svg#Karla-ExtraLight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-Medium.eot");
+  src: url("./../font/Karla/Karla-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-Medium.woff2") format("woff2"),
+    url("./../font/Karla/Karla-Medium.woff") format("woff"),
+    url("./../font/Karla/Karla-Medium.ttf") format("truetype"),
+    url("./../font/Karla/Karla-Medium.svg#Karla-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-MediumItalic.eot");
+  src: url("./../font/Karla/Karla-MediumItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-MediumItalic.woff2") format("woff2"),
+    url("./../font/Karla/Karla-MediumItalic.woff") format("woff"),
+    url("./../font/Karla/Karla-MediumItalic.ttf") format("truetype"),
+    url("./../font/Karla/Karla-MediumItalic.svg#Karla-MediumItalic")
+      format("svg");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-Regular.eot");
+  src: url("./../font/Karla/Karla-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-Regular.woff2") format("woff2"),
+    url("./../font/Karla/Karla-Regular.woff") format("woff"),
+    url("./../font/Karla/Karla-Regular.ttf") format("truetype"),
+    url("./../font/Karla/Karla-Regular.svg#Karla-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-Light.eot");
+  src: url("./../font/Karla/Karla-Light.eot?#iefix") format("embedded-opentype"),
+    url("./../font/Karla/Karla-Light.woff2") format("woff2"),
+    url("./../font/Karla/Karla-Light.woff") format("woff"),
+    url("./../font/Karla/Karla-Light.ttf") format("truetype"),
+    url("./../font/Karla/Karla-Light.svg#Karla-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-LightItalic.eot");
+  src: url("./../font/Karla/Karla-LightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-LightItalic.woff2") format("woff2"),
+    url("./../font/Karla/Karla-LightItalic.woff") format("woff"),
+    url("./../font/Karla/Karla-LightItalic.ttf") format("truetype"),
+    url("./../font/Karla/Karla-LightItalic.svg#Karla-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-SemiBold.eot");
+  src: url("./../font/Karla/Karla-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-SemiBold.woff2") format("woff2"),
+    url("./../font/Karla/Karla-SemiBold.woff") format("woff"),
+    url("./../font/Karla/Karla-SemiBold.ttf") format("truetype"),
+    url("./../font/Karla/Karla-SemiBold.svg#Karla-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("./../font/Karla/Karla-SemiBoldItalic.eot");
+  src: url("./../font/Karla/Karla-SemiBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/Karla/Karla-SemiBoldItalic.woff2") format("woff2"),
+    url("./../font/Karla/Karla-SemiBoldItalic.woff") format("woff"),
+    url("./../font/Karla/Karla-SemiBoldItalic.ttf") format("truetype"),
+    url("./../font/Karla/Karla-SemiBoldItalic.svg#Karla-SemiBoldItalic")
+      format("svg");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Menu./start */
+/* Wrap-menu-top./start */
+.header-site {
+  background-color: black;
+  height: 169px;
+}
+.header-site .wrap-menu-top {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-site .wrap-menu-top .button-menu {
+  display: none;
+}
+.header-site .wrap-menu-top .logo-menu img {
+  width: 100%;
+  object-fit: cover;
+}
+.header-site .wrap-menu-top .wrap-icon-menu {
+  display: flex;
+}
+.header-site .wrap-menu-top .wrap-icon-menu li {
+  margin-left: 20px;
+  position: relative;
+}
+.header-site .wrap-menu-top .wrap-icon-menu li span {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(38, 196, 183);
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  z-index: 3;
+}
+
+/* Wrap-main-menu */
+.header-site .wrap-main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-site .wrap-main-menu ul {
+  display: flex;
+}
+.header-site .wrap-main-menu .main-menu ul li {
+  margin-right: 30px;
+}
+.header-site .wrap-main-menu .user-menu ul li {
+  margin-left: 30px;
+}
+.header-site .wrap-main-menu ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+.header-site .wrap-main-menu ul li:hover a {
+  color: white;
+}
+
+/* Slider./start */
+.slider-main {
+  width: 100%;
+  height: 740px;
+  position: relative;
+  z-index: 1;
+}
+.slider-main img {
+  width: 100%;
+  height: 740px;
+  object-fit: cover;
+  position: relative;
+}
+.slider-main .owl-dots {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-main .owl-dots button span {
+  width: 15px !important;
+  height: 5px !important;
+}
+.slider-main .owl-dots .active span {
+  background-color: #080808 !important;
+}
+
+/* Anniversary./start */
+.anni-main {
+  width: 100%;
+  margin-top: -90px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 50px;
+}
+.anni-main .anni-item {
+  width: 100%;
+  height: 497px;
+  /* border: .1px solid rgb(212, 211, 211); */
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+}
+.anni-main .anni-item a {
+  height: 497px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+.anni-main .anni-item a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+.anni-main .anni-item .anni-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+.anni-main .anni-item .anni-title p {
+  font-size: 1.75em;
+  color: #030303;
+  margin-bottom: 20px;
+}
+.anni-main .anni-item .anni-title span {
+  font-size: 0.875em;
+  font-weight: 700;
+  color: #4fb2d7;
+}
+.anni-main .anni-item .anni-img {
+  text-align: center;
+  width: 100%;
+  object-fit: cover;
+  padding-bottom: 40px;
+}
+
+/* Section-Arknight./start */
+.section-game {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.section-game .collection-card {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.section-game .collection-card a {
+  list-style: none;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+.section-game .collection-card a img {
+  width: 100%;
+  height: 350px;
+  box-sizing: content-box;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center top;
+  object-fit: cover;
+}
+.section-game .collection-card a img:hover {
+  opacity: 0.6;
+  transition: 0.3s ease-in;
+}
+.section-game .collection-card .collection-card-meta {
+  position: absolute;
+  top: 70%;
+  z-index: 2;
+}
+.collection-card .collection-card-meta .collection-card-tittle {
+  text-transform: uppercase;
+  display: inline;
+  background-color: #4fb2d7;
+  color: white;
+  margin-bottom: 10px;
+  padding: 2px 10px;
+  letter-spacing: 0;
+  font-size: 1.625em;
+  line-height: 1.4;
+}
+.collection-card .collection-card-meta .collection-card-subtext {
+  font-size: 0.875em;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin: 10px 0 0 10px;
+  font-size: 0.8125em;
+  color: white;
+}
+
+/* product cart */
+.product-card {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+}
+.product-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  z-index: 1;
+}
+.product-card a:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  transition: 0.15s ease-in;
+}
+.product-card .product-card-img {
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.product-card .product-card-info {
+  font-size: 16px;
+  text-align: center;
+  padding: 20px 20px;
+}
+.product-card .product-card-info .product-card-name {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product-card .product-card-info .product-card-price {
+  color: #6666;
+}
+
+.product-card .product-card-overlay {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.product-card a:hover .product-card-overlay {
+  transition: 0.3s ease-in;
+  display: block;
+}
+.product-card .product-card-overlay .product-card-btn {
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #4fb2d7;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: none;
+  position: absolute;
+  z-index: 3;
+  transition: 0.15s ease-in;
+}
+
+/* Yostar-Game./start */
+.yostar-game {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.yostar-game .wrap-yostar-game {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+}
+.yostar-game .wrap-yostar-game .yostar-game-content {
+  padding: 40px;
+}
+.wrap-yostar-game .yostar-game-content h5 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 13px;
+}
+.wrap-yostar-game .yostar-game-content p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #666666;
+}
+
+/* Subscribe./start./start */
+.subscribe-main {
+  width: 100%s;
+  margin-bottom: 50px;
+}
+.subscribe-main .wrap-subscribe {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.wrap-subscribe .subscribe-tittle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.wrap-subscribe .subscribe-tittle h4 {
+  font-size: 28px;
+  line-height: 38.5px;
+}
+.wrap-subscribe .subscribe-tittle p {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 2px;
+}
+.wrap-subscribe .form-vertical input {
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #f4f4f4;
+  height: 48px;
+  width: 670px;
+  padding: 0 15px;
+  cursor: text;
+  border: none;
+}
+.wrap-subscribe .form-vertical button {
+  height: 48px;
+  width: 48px;
+  border: none;
+  background-color: #4fb2d7;
+  color: white;
+  margin-left: -2px;
+}
+
+/* Footer./start */
+.footer-main {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding-top: 40px;
+}
+.footer-main .footer-item h4 {
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 15px;
+}.footer-main .footer-item {
+  margin-bottom: 50px;
+}
+.footer-main .footer-item ul li{
+  color: rgb(255,255,255,0.6);
+  margin-bottom: 10px;
+}
+.footer-main .footer-item ul li a{
+  text-decoration: none solid ;
+  color: rgb(255,255,255,0.6);
+}
+.footer-main .footer-item ul li a:hover{
+  color: white;
+}
+.footer-main .icon-footer {
+  display: flex;
+  font-size: 20px;
+}
+.footer-main .icon-footer li {
+  padding: 0 10px;
+}
+.footer-main .payment-methods {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-main .official-store {
+  color: rgb(255,255,255,0.6);
+}
+.footer-main .official-store a{
+  text-decoration: none;
+  color: rgb(255,255,255,0.6);
+}
+.footer-main .official-store a:hover{
+  color: white  ;
+}

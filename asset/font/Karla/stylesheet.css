@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Bold.eot');
+    src: url('Karla-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Karla-Bold.woff2') format('woff2'),
+        url('Karla-Bold.woff') format('woff'),
+        url('Karla-Bold.ttf') format('truetype'),
+        url('Karla-Bold.svg#Karla-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Italic.eot');
+    src: url('Karla-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Karla-Italic.woff2') format('woff2'),
+        url('Karla-Italic.woff') format('woff'),
+        url('Karla-Italic.ttf') format('truetype'),
+        url('Karla-Italic.svg#Karla-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-BoldItalic.eot');
+    src: url('Karla-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karla-BoldItalic.woff2') format('woff2'),
+        url('Karla-BoldItalic.woff') format('woff'),
+        url('Karla-BoldItalic.ttf') format('truetype'),
+        url('Karla-BoldItalic.svg#Karla-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-ExtraBoldItalic.eot');
+    src: url('Karla-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karla-ExtraBoldItalic.woff2') format('woff2'),
+        url('Karla-ExtraBoldItalic.woff') format('woff'),
+        url('Karla-ExtraBoldItalic.ttf') format('truetype'),
+        url('Karla-ExtraBoldItalic.svg#Karla-ExtraBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-ExtraLightItalic.eot');
+    src: url('Karla-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karla-ExtraLightItalic.woff2') format('woff2'),
+        url('Karla-ExtraLightItalic.woff') format('woff'),
+        url('Karla-ExtraLightItalic.ttf') format('truetype'),
+        url('Karla-ExtraLightItalic.svg#Karla-ExtraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-ExtraBold.eot');
+    src: url('Karla-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Karla-ExtraBold.woff2') format('woff2'),
+        url('Karla-ExtraBold.woff') format('woff'),
+        url('Karla-ExtraBold.ttf') format('truetype'),
+        url('Karla-ExtraBold.svg#Karla-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-ExtraLight.eot');
+    src: url('Karla-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Karla-ExtraLight.woff2') format('woff2'),
+        url('Karla-ExtraLight.woff') format('woff'),
+        url('Karla-ExtraLight.ttf') format('truetype'),
+        url('Karla-ExtraLight.svg#Karla-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Medium.eot');
+    src: url('Karla-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Karla-Medium.woff2') format('woff2'),
+        url('Karla-Medium.woff') format('woff'),
+        url('Karla-Medium.ttf') format('truetype'),
+        url('Karla-Medium.svg#Karla-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-MediumItalic.eot');
+    src: url('Karla-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karla-MediumItalic.woff2') format('woff2'),
+        url('Karla-MediumItalic.woff') format('woff'),
+        url('Karla-MediumItalic.ttf') format('truetype'),
+        url('Karla-MediumItalic.svg#Karla-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Regular.eot');
+    src: url('Karla-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Karla-Regular.woff2') format('woff2'),
+        url('Karla-Regular.woff') format('woff'),
+        url('Karla-Regular.ttf') format('truetype'),
+        url('Karla-Regular.svg#Karla-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Light.eot');
+    src: url('Karla-Light.eot?#iefix') format('embedded-opentype'),
+        url('Karla-Light.woff2') format('woff2'),
+        url('Karla-Light.woff') format('woff'),
+        url('Karla-Light.ttf') format('truetype'),
+        url('Karla-Light.svg#Karla-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-LightItalic.eot');
+    src: url('Karla-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karla-LightItalic.woff2') format('woff2'),
+        url('Karla-LightItalic.woff') format('woff'),
+        url('Karla-LightItalic.ttf') format('truetype'),
+        url('Karla-LightItalic.svg#Karla-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-SemiBold.eot');
+    src: url('Karla-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Karla-SemiBold.woff2') format('woff2'),
+        url('Karla-SemiBold.woff') format('woff'),
+        url('Karla-SemiBold.ttf') format('truetype'),
+        url('Karla-SemiBold.svg#Karla-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-SemiBoldItalic.eot');
+    src: url('Karla-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karla-SemiBoldItalic.woff2') format('woff2'),
+        url('Karla-SemiBoldItalic.woff') format('woff'),
+        url('Karla-SemiBoldItalic.ttf') format('truetype'),
+        url('Karla-SemiBoldItalic.svg#Karla-SemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+

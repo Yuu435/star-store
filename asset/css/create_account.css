@@ -1,0 +1,52 @@
+.create-account-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+  .create-account-main .wrap-create-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    margin: 50px;
+  }
+  .create-account-main .wrap-create-account h1 {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 50px;
+      letter-spacing: 3.6px;
+      text-transform: uppercase;
+      margin-bottom: 23px;
+  }
+  .create-account-main .wrap-create-account .form-create-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .create-account-main .wrap-create-account .form-create-account input{
+      width: 480px;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 10px;
+      padding: 13px 15px;
+      cursor: text;
+      background-color: #f4f4f4;
+      border: none;
+  }
+  .create-account-main .wrap-create-account .form-create-account button {
+      width: 480px;
+      height: 48px;
+      border: none;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      text-transform: uppercase;
+      background-color: #4fb2d7;
+      color: white;
+      margin-bottom: 20px;
+  }

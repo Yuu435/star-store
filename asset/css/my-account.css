@@ -1,0 +1,55 @@
+.account-main {
+  width: 100%;
+  height: 400px;
+  margin: 50px 0;
+}
+.account-main .tittle-account {
+    margin-bottom: 30px;
+}
+.account-main .tittle-account h1 {
+  font-size: 36px;
+  line-height: 50px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+.account-main .order-history {
+  background-color: white;
+  padding: 40px;
+}
+.account-main .order-history h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.account-main .order-history p{
+    font-size: 16px;
+    line-height: 22px;
+
+}
+.account-main .account-details {
+  background-color: white;
+  padding: 40px;
+}
+.account-main .account-details h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.account-main .account-details p{
+    font-size: 16px;
+    line-height: 22px;
+}
+.account-main .account-details .view-addresses{
+    margin-top: 10px;
+}
+.account-details .view-addresses a {
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #4fb2d7;
+}
+.account-details .view-addresses a:hover{
+    color: rgb(0, 0, 0, 0.5);
+}
