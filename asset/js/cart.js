@@ -3,26 +3,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lấy danh sách sản phẩm từ Local Storage
     const cartItemsContainer = document.querySelector('.cart-item');
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    console.log(cartItems);
 
-    cartItems.forEach(item => {
+
+    cartItems.forEach((item, index) => {
+        // console.log(cartItems);
         const cartItemElement = document.createElement('div');
         cartItemElement.classList.add('cart-item-element');
 
         cartItemElement.innerHTML = `
             <div class="cart-img">
-                <img src="${item.images[0]}" alt="">
+                <img src="${item.images[0]}" alt="${item.name}">
             </div>
             <div class="cart-title">
                 <a href="#">${item.name}</a>
-                <a href="#">Remove</a>
+                <a class="remove-item" href="#">Remove</a>
             </div>
             <div class="cart-qty">
                 <button class="btn-minus">-</button>
                 <input class="quantity" type="text" value="${item.quantity}">
                 <button class="btn-plus">+</button>
             </div>
-            <span class="cart-total">${item.price * item.quantity}</span>
+            <p>$<span class="cart-total"> ${item.price * item.quantity}</span></p>
         `;
         cartItemsContainer.appendChild(cartItemElement);
 
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const quantityInput = cartItemElement.querySelector('.quantity');
         const minusButton = cartItemElement.querySelector('.btn-minus');
         const plusButton = cartItemElement.querySelector('.btn-plus');
-
+        const removeButton = cartItemElement.querySelector('.remove-item');
         const minQuantity = 1;
 
         minusButton.addEventListener('click', () => {
@@ -44,14 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             quantityInput.value = currentQuantity;
 
-            updateCartItemTotal(item, currentQuantity);
+            updateCartItemTotal(cartItemElement, item, currentQuantity);
+            updateLocalStorage();
         });
 
         plusButton.addEventListener('click', () => {
             let currentQuantity = parseInt(quantityInput.value);
             currentQuantity++;
             quantityInput.value = currentQuantity;
-            updateCartItemTotal(item, currentQuantity);
+            updateCartItemTotal(cartItemElement, item, currentQuantity);
+            updateLocalStorage();
         });
 
         quantityInput.addEventListener('input', () => {
@@ -60,24 +63,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentQuantity = minQuantity;
                 quantityInput.value = currentQuantity;
             }
-            updateCartItemTotal(item, currentQuantity);
+            updateCartItemTotal(cartItemElement, item, currentQuantity);
+            updateLocalStorage();
         });
 
-
+        removeButton.addEventListener('click', () => {
+            cartItems.splice(index, 1);
+            updateLocalStorage();
+            // xóa phần tử dom dư thừa
+            cartItemElement.remove();
+        });
     });
 
 
-    const updateCartItemTotal = (item, currentQuantity) => {
-        const totalElement = item.querySelector('.cart-total');
+    const updateCartItemTotal = (cartItemElement, item, currentQuantity) => {
+        const totalElement = cartItemElement.querySelector('.cart-total');
         const itemTotal = item.price * currentQuantity;
         totalElement.textContent = itemTotal;
+        item.quantity = currentQuantity
         updateLocalStorage();
     };
 
-
     const updateLocalStorage = () => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    };
+    }
 });
 
 
