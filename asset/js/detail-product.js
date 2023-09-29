@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[0].style.display = "block";
         dots[0].classList.add("active");
         
-        slide.addEventListener("click", () => {
+        slide.addEventListener("click", () => { 
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
@@ -65,6 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     addToCartButton.addEventListener('click', () => {
+        // popup succes
+        const popupSucces = document.querySelector('.popup-succes');
+        popupSucces.style.top = '120px';
+        setTimeout(()=>{
+            popupSucces.style.top = '-100px';
+        },3000);
+
 
         const quantityValue = parseInt(quantityInput.value, 10);
 
@@ -88,10 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             cartItems.push(product);
         }
+    
 
         // Lưu danh sách sản phẩm vào Local Storage
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-        alert('Sản phẩm đã được thêm vào giỏ hàng.');
     });
 });

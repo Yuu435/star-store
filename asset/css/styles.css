@@ -332,17 +332,94 @@ table {
 /* Menu./start */
 /* Wrap-menu-top./start */
 .header-site {
+  width: 100%;
   background-color: black;
-  height: 169px;
+  /* height: 169px; */
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 .header-site .wrap-menu-top {
   height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 0.4s;
 }
+
+/* Responsive.Start */
 .header-site .wrap-menu-top .button-menu {
   display: none;
+  background-color: black;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidenav li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav .closeBtn {
+  font-size: 20px;
+  text-align: end;
+  margin-right: 20px;
+}
+
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.main-content {
+  transition: margin-left 0.5s;
+  position: relative;
+}
+
+.color-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 11;
+}
+
+.sidenav-open {
+  width: 250px;
+}
+.main-content-push {
+  margin-left: 250px;
+}
+
+
+/* Logo.start */
+.header-site .wrap-menu-top .logo-menu{
+  width: 250px;
+  height: 73px;
 }
 .header-site .wrap-menu-top .logo-menu img {
   width: 100%;
@@ -368,6 +445,7 @@ table {
 
 /* Wrap-main-menu */
 .header-site .wrap-main-menu {
+  height: 59px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -389,9 +467,13 @@ table {
 .header-site .wrap-main-menu ul li:hover a {
   color: white;
 }
+.header-site .wrap-main-menu .wrap-icon-menu {
+  display: none;
+}
 
 /* Slider./start */
 .slider-main {
+  margin-top: 169px;
   width: 100%;
   height: 740px;
   position: relative;
@@ -428,7 +510,6 @@ table {
 .anni-main .anni-item {
   width: 100%;
   height: 497px;
-  /* border: .1px solid rgb(212, 211, 211); */
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
 }
@@ -440,6 +521,7 @@ table {
   flex-direction: column;
   text-decoration: none;
   color: black;
+  padding: 20px;
 }
 .anni-main .anni-item a:hover {
   background-color: rgba(0, 0, 0, 0.1);
@@ -465,9 +547,11 @@ table {
 }
 .anni-main .anni-item .anni-img {
   text-align: center;
+  padding-bottom: 40px;
+}
+.anni-main .anni-item .anni-img img {
   width: 100%;
   object-fit: cover;
-  padding-bottom: 40px;
 }
 
 /* Section-Arknight./start */
@@ -532,11 +616,13 @@ table {
 .product-card {
   width: 100%;
   height: 350px;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 25px;
 }
 .product-card a {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -546,22 +632,25 @@ table {
   color: black;
   position: relative;
   z-index: 1;
+  padding: 20px;
 }
 .product-card a:hover {
   background-color: rgba(0, 0, 0, 0.06);
   transition: 0.15s ease-in;
 }
 .product-card .product-card-img {
+  width: 180px;
+  height: 250px;
+  text-align: center;
+}
+.product-card .product-card-img img {
   width: 100%;
   object-fit: cover;
-  text-align: center;
-  padding-top: 10px;
 }
 
 .product-card .product-card-info {
   font-size: 16px;
   text-align: center;
-  padding: 20px 20px;
 }
 .product-card .product-card-info .product-card-name {
   font-weight: 700;
@@ -569,7 +658,7 @@ table {
 }
 
 .product-card .product-card-info .product-card-price {
-  color: #6666;
+  color: #666;
 }
 
 .product-card .product-card-overlay {
@@ -595,7 +684,6 @@ table {
   border: none;
   position: absolute;
   z-index: 3;
-  transition: 0.15s ease-in;
 }
 
 /* Yostar-Game./start */
@@ -611,6 +699,14 @@ table {
   background-color: white;
   padding: 30px;
 }
+.yostar-game .wrap-yostar-game .yostar-game-img {
+  width: 540px;
+}
+.yostar-game-img img {
+  /* width: 100%; */
+  object-fit: cover;
+}
+
 .yostar-game .wrap-yostar-game .yostar-game-content {
   padding: 40px;
 }
@@ -683,18 +779,19 @@ table {
   font-size: 24px;
   line-height: 33px;
   margin-bottom: 15px;
-}.footer-main .footer-item {
+}
+.footer-main .footer-item {
   margin-bottom: 50px;
 }
-.footer-main .footer-item ul li{
-  color: rgb(255,255,255,0.6);
+.footer-main .footer-item ul li {
+  color: rgb(255, 255, 255, 0.6);
   margin-bottom: 10px;
 }
-.footer-main .footer-item ul li a{
-  text-decoration: none solid ;
-  color: rgb(255,255,255,0.6);
+.footer-main .footer-item ul li a {
+  text-decoration: none solid;
+  color: rgb(255, 255, 255, 0.6);
 }
-.footer-main .footer-item ul li a:hover{
+.footer-main .footer-item ul li a:hover {
   color: white;
 }
 .footer-main .icon-footer {
@@ -707,14 +804,101 @@ table {
 .footer-main .payment-methods {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 10px;
 }
 .footer-main .official-store {
-  color: rgb(255,255,255,0.6);
+  color: rgb(255, 255, 255, 0.6);
 }
-.footer-main .official-store a{
+.footer-main .official-store a {
   text-decoration: none;
-  color: rgb(255,255,255,0.6);
+  color: rgb(255, 255, 255, 0.6);
 }
-.footer-main .official-store a:hover{
-  color: white  ;
+.footer-main .official-store a:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 1199px) {
+  /* Header./start */
+  .wrap-main-menu {
+    display: flex;
+  }
+  .wrap-main-menu ul li {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .wrap-main-menu .user-menu {
+    display: none;
+  }
+  .section-game .row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .section-game .col {
+    flex: 0 0 auto;
+  }
+  .product-card .product-card-overlay {
+    top: 40%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+  }
+  .yostar-game .wrap-yostar-game {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .section-game .row {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .yostar-game .wrap-yostar-game {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .yostar-game-img img {
+    width: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 991px) {
+  /* Subscribe./start */
+  .subscribe-main .form-vertical input {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* header.start */
+  .header-site {
+    height: 100px;
+  }
+  .header-site .wrap-menu-top .wrap-icon-menu {
+    display: none;
+  }
+  .header-site .wrap-menu-top .button-menu {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+  }
+  .header-site .wrap-menu-top .logo-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* Yostar Game.start */
+  .yostar-game .wrap-yostar-game {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Subscribe./start */
+  .subscribe-main .form-vertical input {
+    width: 350px;
+  }
+  /* footer./start */
+  .footer-main .payment-methods {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
 }

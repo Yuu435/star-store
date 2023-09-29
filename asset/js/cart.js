@@ -1,8 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     // Lấy danh sách sản phẩm từ Local Storage
     const cartItemsContainer = document.querySelector('.cart-item');
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+
+
+    // update cart display
+    const updateCartDisplay = () => {
+        const cartEty = document.querySelector('.cartEty');
+        const cartShopping = document.querySelector('.cartShopping');
+        const instructions = document.querySelector('.instructions');
+
+        if (cartItems.length > 0) {
+            cartShopping.classList.remove('active');
+            instructions.classList.remove('active');
+            cartEty.classList.add('active');
+        } else {
+            cartShopping.classList.add('active');
+            instructions.classList.add('active');
+            cartEty.classList.remove('active');
+        };
+    }
+    updateCartDisplay();
+
+
+    // tổng
+    const sumCartTotal = () => {
+        let cartTotal = 0;
+        cartItems.forEach((item) => {
+            cartTotal += item.price * item.quantity;
+        });
+        return cartTotal.toFixed(2);
+    };
+
+    // Cập nhât cart-subtotal
+    const updateCartSubtotal = () => {
+        const cartSubtotalElement = document.querySelector('.cart-subtotal');
+        const cartTotal = sumCartTotal();
+        cartSubtotalElement.textContent = `$${cartTotal}`;
+        localStorage.setItem('cartSubtotal', cartSubtotalElement.textContent);
+    };
+    updateCartSubtotal();
+
 
 
     cartItems.forEach((item, index) => {
@@ -23,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <input class="quantity" type="text" value="${item.quantity}">
                 <button class="btn-plus">+</button>
             </div>
-            <p>$<span class="cart-total"> ${item.price * item.quantity}</span></p>
+            <p>$<span class="cart-total">${item.price * item.quantity}</span></p>
         `;
         cartItemsContainer.appendChild(cartItemElement);
 
@@ -33,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const minusButton = cartItemElement.querySelector('.btn-minus');
         const plusButton = cartItemElement.querySelector('.btn-plus');
         const removeButton = cartItemElement.querySelector('.remove-item');
-        const minQuantity = 1;
 
+        const minQuantity = 1;
         minusButton.addEventListener('click', () => {
             let currentQuantity = parseInt(quantityInput.value);
 
@@ -67,11 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
             updateLocalStorage();
         });
 
+
+        // Xóa sản phẩm
         removeButton.addEventListener('click', () => {
             cartItems.splice(index, 1);
-            updateLocalStorage();
             // xóa phần tử dom dư thừa
             cartItemElement.remove();
+            updateLocalStorage();
+            updateCartDisplay();
         });
     });
 
@@ -86,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateLocalStorage = () => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        updateCartSubtotal();
     }
 });
 
