@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isNaN(quantityValue) || quantityValue < 1) {
             return;
         }
+        
         const product = {
             images: productImages,
             name: productName,

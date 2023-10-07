@@ -887,6 +887,7 @@ table {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  
   /* Yostar Game.start */
   .yostar-game .wrap-yostar-game {
     flex-wrap: wrap;
@@ -900,5 +901,14 @@ table {
   .footer-main .payment-methods {
     justify-content: flex-start;
     margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-site .wrap-main-menu ul li {
+    margin-right: 24px;
+  }
+  .header-site .wrap-main-menu ul li a{
+    font-size: 14px;
   }
 }
