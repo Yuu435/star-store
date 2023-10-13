@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             slides[slideIndex].style.display = "block";
             dots[slideIndex].className += " active";
-        })
-    })
+        });
+    });
 
 
     /*================ Quantity./start ==============*/

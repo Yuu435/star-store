@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    // Sidenav push.start 
+    // Sidenav push mobile.start 
     const barbtn = document.querySelector(".button-menu");
     const sidenav = document.querySelector(".sidenav");
     const mainContent = document.querySelector(".main-content");
