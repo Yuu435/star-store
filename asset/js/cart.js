@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.quantity = currentQuantity
         updateLocalStorage();
     };
-    console.log(updateCartItemTotal(cartItemElement, item, currentQuantity));
+
 
     const updateLocalStorage = () => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));

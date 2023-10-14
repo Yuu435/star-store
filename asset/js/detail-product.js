@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /*================ product photo./start==============*/
+    /*================ product photo slideShow./start==============*/
     const mySlides = document.querySelectorAll(".product-single");
 
     mySlides.forEach((slide, slideIndex) => {
